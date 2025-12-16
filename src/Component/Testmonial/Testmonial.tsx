@@ -6,7 +6,7 @@ import { Carousel, CarouselItem } from 'react-bootstrap';
 export default function Testmonial() {
     const [index, setIndex] = useState(0);
 
-    const handleSelect = (selectedIndex) => {
+    const handleSelect = (selectedIndex:number) => {
         setIndex(selectedIndex);
     };
 

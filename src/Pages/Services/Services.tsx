@@ -1,4 +1,3 @@
-import React from 'react'
 import Breadcrumb from '../../Component/Breadcrumb/Breadcrumb'
 import { Carousel } from 'react-bootstrap'
 import ConvertLang from '../../Component/ConvertLang/ConvertLang'

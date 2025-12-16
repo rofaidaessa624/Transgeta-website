@@ -1,6 +1,3 @@
-import Breadcrumb from "../../Component/Breadcrumb/Breadcrumb";
-
- 
 
 export default function Ethics() {
   return (

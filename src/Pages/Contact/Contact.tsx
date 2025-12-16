@@ -1,11 +1,5 @@
-import { useForm } from 'react-hook-form';
 import Breadcrumb from '../../Component/Breadcrumb/Breadcrumb';
 export default function Contact() {
-    let {
-        register,
-        handleSubmit,
-        formState: { errors }
-    } = useForm();
     return (
         <>
             <Breadcrumb pageName={"Contact"} />
@@ -45,7 +39,7 @@ export default function Contact() {
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="message" className="form-label">Your Message</label>
-                                <textarea className="form-control" id="message" rows="3" placeholder='Your Message'></textarea>
+                                <textarea className="form-control" id="message" rows={3} placeholder='Your Message'></textarea>
                             </div>
                             <button type="submit" className="btn bg-primary text-white">Submit Form</button>
                         </form>

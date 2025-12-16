@@ -2,7 +2,7 @@ import { useState } from 'react';
 import quoteIcon from '../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/image (4).svg'
 import styles from './Testmonial.module.css'
 import quoteEndIcon from '../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/image (5).svg' 
-import { Carousel, CarouselItem } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 export default function Testmonial() {
     const [index, setIndex] = useState(0);
 

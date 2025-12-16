@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClock, faEnvelopeOpenText, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faClock, faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons'
 import { FiPhone } from 'react-icons/fi'
 
 

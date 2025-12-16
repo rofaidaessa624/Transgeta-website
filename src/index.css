@@ -1,14 +1,14 @@
 .whatsAppIcon{
     position: fixed;
     bottom: 50px;
-    right: 50px;
+    right: 15px;
     width: 75px;
     height: 75px;
 }
 .freeTransContainer{
     position: fixed;
     bottom: 150px;
-    right: 50px;
+    right: 15px;
     border-radius: 15px !important;
 }
 .bg-colored{

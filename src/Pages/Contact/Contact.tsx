@@ -45,7 +45,7 @@ export default function Contact() {
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="message" className="form-label">Your Message</label>
-                                <textarea class="form-control" id="message" rows="3" placeholder='Your Message'></textarea>
+                                <textarea className="form-control" id="message" rows="3" placeholder='Your Message'></textarea>
                             </div>
                             <button type="submit" className="btn bg-primary text-white">Submit Form</button>
                         </form>

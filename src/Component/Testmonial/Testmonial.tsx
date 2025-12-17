@@ -11,7 +11,8 @@ export default function Testmonial() {
 
     return (
         <>
-            <div className="container">
+        <section className="my-5">
+                        <div className="container">
                 <div className="row">
                     <h2 className='fw-bolder my-5 display-5 text-center'>Our Customer's Positive Comments</h2>
                     <div className=" col-12 bg-colored rounded-3 mx-auto">
@@ -126,6 +127,7 @@ export default function Testmonial() {
                     </div>
                 </div >
             </div >
+        </section>
         </>
     )
 }

@@ -6,12 +6,12 @@ import logo from '../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/Untit
 export default function About() {
     return (
         <>
-            <section>
+            <section className="my-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 col-12">
-                            <img src={logo} alt="" />
-                            <div className="d-flex align-items-center gap-3">
+                                                            <img src={logo} alt="" className="img-fluid"/>
+=                            <div className="d-flex align-items-center gap-3">
                                 <div className="icon-container bg-black p-1 rounded-circle">
                                     <FaRegCircleDot size={25} fill="#fff" className="bg-black " />
                                 </div>

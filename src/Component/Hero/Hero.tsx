@@ -3,16 +3,22 @@ import logo from '../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/Untit
 import { Link } from 'react-router-dom'
 import CountUp from "react-countup";
 import { IoLogoWechat } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 
 
 export default function Hero() {
     return (
         <>
+            <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
             <section className={`${styles['hero-bg']} mb-4`}>
                 <div className="container-fluid p-0">
                     <div className="row m-0">
-                        <div className="col-md-6 col-12 align-self-end ps-5">
+                        <div className="col-md-6 col-12 align-self-end ps-md-5">
                             <div className="row">
                                 <div className="col-6 d-flex">
                                     <IoLogoWechat color='white' className='bg-black rounded-circle px-2 mx-3'
@@ -52,7 +58,7 @@ export default function Hero() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-6 col-12 pe-0">
+                        <div className="col-md-6 col-12 px-0 px-md-4 ">
                             <div className={`card p- pb-3 ${styles['heroColor']} border-0 rounded-0 rounded-start-3 `}>
                                 <img
                                     src={logo}
@@ -74,6 +80,7 @@ export default function Hero() {
                     </div>
                 </div>
             </section>
+    </motion.div>
         </>
     )
 }

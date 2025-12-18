@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 
 type LanguageContextType = {
   language: string;
-  setLanguage: React.Dispatch<React.SetStateAction<string>>;
-};
-export const LanguageContext=createContext<LanguageContextType | undefined>(undefined);
+  setLanguage: (lang:string)=>void;
+}|null;
+export const LanguageContext=createContext<LanguageContextType>(null);
 
 export default function LanguageProvider({children}:{children:ReactNode}){
   const {i18n}=useTranslation();

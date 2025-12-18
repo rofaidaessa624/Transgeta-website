@@ -1,12 +1,12 @@
 .hero-bg {
     min-height: 100vh;
-    padding-top: 35%;
-    background: url(../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/hero-bg.jpg) left top/90% 100vh no-repeat;
+    background: linear-gradient(          rgba(50, 50, 50, 0.7), 
+    rgba(50, 50, 50, 0.7)),url(../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/hero-bg.jpg) center/cover no-repeat;
 }
 
-.heroColor {
+/* .heroColor {
     background-color: #1b90c6;
-}
+} */
 
 @media screen and (width<768px) {
     .hero-bg {

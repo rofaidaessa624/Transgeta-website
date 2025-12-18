@@ -35,7 +35,6 @@ export default function NavBar() {
       <Navbar expand="lg" className="bg-white">
         <Container fluid>
           <Navbar.Brand>
-            <Link to='/'>
               <img
                 alt=""
                 src={logo}
@@ -43,7 +42,6 @@ export default function NavBar() {
                 height={150}
                 className="d-inline-block align-top"
               />
-            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

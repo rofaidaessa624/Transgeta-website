@@ -5,11 +5,14 @@ import './index.css'
 import App from './App.tsx'
 import "./i18n";
 import LanguageProvider from './Context/LanguageContext.tsx';
+import AuthContextProvider from './Context/AuthContext/AuthContext.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <LanguageProvider>
-    <App />
+      <AuthContextProvider>
+            <App />
+      </AuthContextProvider>
     </LanguageProvider>
   </StrictMode>,
 )

@@ -8,14 +8,18 @@ import { LanguageContext } from '../../Context/LanguageContext';
 export default function Accuracy() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
-    const {language}=useContext(LanguageContext);
-    console.log(language);
-    
+    const context = useContext(LanguageContext);
+    if (!context) {
+        throw new Error("LanguageContext must be used within a LanguageProvider");
+    }
+
+    const { language } = context;
+
     return (
         <>
             <motion.div
                 ref={ref}
-                initial={{ x: language==="en" ? -200 : 200, opacity: 0 }}
+                initial={{ x: language === "en" ? -200 : 200, opacity: 0 }}
                 animate={isInView ? { x: 0, opacity: 1 } : {}}
                 transition={{ type: "spring", stiffness: 100, damping: 20, duration: 1 }}
             >

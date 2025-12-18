@@ -9,6 +9,7 @@ import Resources from './Pages/Resources/Resources';
 import About from './Pages/About/About';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
+import Login from './Pages/Login/Login';
 
 function App() {
   const {i18n}=useTranslation();
@@ -16,7 +17,8 @@ function App() {
   useEffect(()=>{
         document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   },[])
-  const routes=createBrowserRouter([{
+  const routes=createBrowserRouter([
+    {
     path:'/',
     element:<MasterLayout/>,
     // errorElement:<NotFound/>,
@@ -28,7 +30,15 @@ function App() {
       {path:"/service",element:<Services/>},
       {path:"/contact",element:<Contact/>}
     ]
-}],
+},
+    {
+      path:"/login",
+      element:<Login/>,
+      children:[
+        {index:true,element:<Login/>}
+      ]
+    },
+],
 
 )
   return (

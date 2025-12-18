@@ -4,15 +4,20 @@
     right: 15px;
     width: 75px;
     height: 75px;
+    z-index: 15000;
 }
 .freeTransContainer{
     position: fixed;
     bottom: 150px;
     right: 15px;
+    z-index: 15000;
     border-radius: 15px !important;
 }
 .bg-colored{
-       background-color: #1b90c6;
+    background:linear-gradient(#1b90c6,#1b90c6), url('../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/bg-4.png') center/cover no-repeat;
+}
+.txt-colored{
+       color: #1b90c6;
 }
 
 .cricledIcon{
@@ -20,7 +25,14 @@
     height: 48px;
     border-radius: 50%;
 }
-
+.brand-img {
+  width: 100%;
+  max-width: 140px;   
+  height: 100px;       
+  object-fit:contain;
+  margin: 0 auto;    
+  display: block;
+}
 html[dir="rtl"] {
   direction: rtl;
   text-align: right;

@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/cropped-WhatsApp_Image_2025-11-12_at_17-06-08_0162802e-remov (3).png'
 import { useContext } from 'react';
 import axios from 'axios'
@@ -7,7 +7,7 @@ import { AuthContext } from '../../Context/AuthContext/AuthContext';
 
 
 export default function Login() {
-    let navigate=useNavigate();
+    // let navigate=useNavigate();
     const context = useContext(AuthContext);
     if (!context) {
         throw new Error("AuthContext must be used within a LanguageProvider");
@@ -24,7 +24,7 @@ export default function Login() {
       let response= await axios.post('https://dummyjson.com/user/login', data);
       localStorage.setItem("token",response.data.accessToken)
       saveLoginData();
-      navigate('/');
+      window.location.href='https://transgetasoft.infinityfreeapp.com/';
     } catch (error:any) {
       console.log(error.message);
     }

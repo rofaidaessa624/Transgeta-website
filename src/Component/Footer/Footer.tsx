@@ -5,7 +5,7 @@ import logo from '../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/Untit
 export default function Footer() {
     return (
         <>
-            <footer className='py-md-5  mt-5 pb-5'>
+            <footer className='py-md-5  mt-5 pb-5 bg-colored'>
                 <div className="container ">
                     <div className="row align-items-start align-items-sm-center">
                         <div className="col-md-4 col-sm-6 column-gap-sm-5">

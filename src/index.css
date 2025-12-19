@@ -14,7 +14,7 @@
     border-radius: 15px !important;
 }
 .bg-colored{
-    background:linear-gradient(#1b90c6,#1b90c6), url('../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/bg-4.png') center/cover no-repeat;
+    background:linear-gradient(rgba(27, 144, 198,0.98),rgba(27, 144, 198,0.98)), url(../src/assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/bg-4.png) center/cover no-repeat;
 }
 .txt-colored{
        color: #1b90c6;

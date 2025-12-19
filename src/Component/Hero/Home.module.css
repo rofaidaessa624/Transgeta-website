@@ -10,9 +10,8 @@
 
 @media screen and (width<768px) {
     .hero-bg {
-        min-height: 100vh;
-        padding-top: 100%;
-        background: url(../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/hero-bg.jpg) left top/100% 100vh no-repeat;
+        min-height: 100dvh;
+        background: url(../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/hero-bg.jpg) left top/cover no-repeat;
     }
 
 }

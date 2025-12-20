@@ -13,9 +13,10 @@ export default function MakeAppointment() {
                             <div className="d-flex">
                                 <h2>Make Appointment</h2>
                             </div>
-                            <h3>Get Our Service Easily</h3>
-                            <p>At TransGate, we believe that every word matters. Accuracy in translation is not just a service—it’s a responsibility. Whether you’re translating official documents, academic research, or critical medical reports, precision and professionalism are at the heart of everything we do.</p>
-                            <p>We provide certified, reliable, and high-quality translation services for all types of documents and in all languages. Our team of specialized translators ensures that every text is delivered with clarity, consistency, and flawless linguistic accuracy.</p>
+                            <h3>Access Our Services with Ease</h3>
+                            <p>
+                                Experience seamless access to Trans-Gate's translation and academic consultation services. Our streamlined process allows you to submit your documents, request consultations, and receive expert support quickly and efficiently, saving you time while ensuring high-quality results.
+                            </p>
                             <p>From graduation certificates and legal contracts to theses, dissertations, and medical reports—TransGate is your trusted partner for all translation needs.</p>
                             <div className="icons row my-5 mb-3 pt-5">
                                 <div className="col-md-4 col-6">

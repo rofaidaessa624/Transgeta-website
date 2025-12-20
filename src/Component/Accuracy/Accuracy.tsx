@@ -37,32 +37,34 @@ export default function Accuracy() {
                             </div>
                             <div className="row my-4 gy-4">
                                 <div className="col-lg-4 col-md-6 col-12">
-                                    <div className="card px-4 pt-4">
+                                    <div className="card px-4 pt-4 h-100">
                                         <div className="imgContainer position-relative">
                                             <img src={card1Img} className="rounded-0 card-img-top" alt="..." />
                                             <img src="" alt="" className='rounded-circle position-absolute bottom-0 right-0' />
                                         </div>
 
                                         <div className="card-body d-flex flex-column">
-                                            <h5 className="card-title">Error-Free Translation</h5>
+                                            <h5 className="card-title">Flawless Translation</h5>
                                             <p className="card-text flex-grow-1">
-                                                Eliminates mistakes that could delay or harm your academic or professional progress.
+                                                EWe deliver translations free of errors, preventing delays or setbacks in your
+academic and professional endeavors.liminates mistakes that could delay or harm your academic or professional progress.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6 col-12">
-                                    <div className="card px-4 pt-4">
+                                    <div className="card px-4 pt-4 h-100">
                                         <div className="imgContainer position-relative">
                                             <img src={card2Img} className="rounded-0 card-img-top" alt="..." />
                                             <img src="" alt="" className='rounded-circle position-absolute bottom-0 right-0' />
                                         </div>
 
-                                        <div className="card-body d-flex flex-column">
-                                            <h5 className="card-title">Expert Linguists</h5>
+                                        <div className="card-body">
+                                            <h5 className="card-title">Specialized Linguists</h5>
                                             <p className="card-text flex-grow-1">
-                                                Your documents are handled by specialists with strong command of language and context.
-                                            </p>
+Your documents are managed by experts with deep linguistic knowledge and
+contextual understanding.                                            
+</p>
                                         </div>
                                     </div>
                                 </div>
@@ -74,9 +76,12 @@ export default function Accuracy() {
                                         </div>
 
                                         <div className="card-body">
-                                            <h5 className="card-title">Precise Meaning Transfer</h5>
-                                            <p className="card-text">
-                                                We ensure every idea is conveyed clearly and accurately.
+                                            <h5 className="card-title">Academic Research Support</h5>
+                                            <p className="card-text flex-grow-1">
+We provide guidance to enhance the quality and impact of your research. From
+structuring your thesis or dissertation to refining your arguments and methodology, 
+we hwlp ensure your work meets the highest academic standards.
+Our support empowers you to present your ideas with clarity, rigor, and confidence.
                                             </p>
                                         </div>
                                     </div>

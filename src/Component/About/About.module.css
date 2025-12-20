@@ -1,3 +1,6 @@
 .list-img{
      list-style-image: url('../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/checkcircle.svg');
 }
+.about-bg{
+     background: url(/images/graduation.png) no-repeat center/contain;
+}

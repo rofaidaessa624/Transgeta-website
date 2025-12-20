@@ -8,10 +8,10 @@ export default function Contact() {
             <Breadcrumb pageName={"Contact"} />
             <div className="container">
                 <div className="row">
-                    <h2>Get In Touch</h2>
-                    <div className="icons row my-5 mb-3 pt-5 gy-5 mx-auto">
-                        <div className="col-md-4 col-10">
-                            <div className="d-flex gap-3 align-items-center">
+                    <h2 className='fw-bolder mb-0'>Get In Touch</h2>
+                    <div className="icons row my-4  gy-5  mx-auto">
+                        <div className="col-md-4 col-10 mt-0">
+                            <div className="d-flex h-100 gap-3 align-items-center">
                                 <div className="d-flex text-white bg-black cricledIcon justify-content-center align-items-center">
                                     <FontAwesomeIcon className='fs-4 bg-black rounded-circle' icon={faEnvelopeOpenText} />
                                 </div>
@@ -21,7 +21,7 @@ export default function Contact() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4 col-10">
+                        <div className="col-md-4 col-10 mt-0">
                             <div className="d-flex gap-3 align-items-center">
                                 <div className="d-flex text-white bg-black cricledIcon justify-content-center align-items-center">
                                     <FontAwesomeIcon className='fs-4 bg-black rounded-circle' icon={faClock} />
@@ -33,7 +33,7 @@ export default function Contact() {
                             </div>
 
                         </div>
-                        <div className="col-md-4 col-10">
+                        <div className="col-md-4 col-10 mt-0">
                             <div className="d-flex gap-3 align-items-center">
                                 <div className="d-flex text-white bg-black cricledIcon justify-content-center align-items-center">
                                     {/* <FontAwesomeIcon className='fs-4 bg-black rounded-circle' icon={faPhone} /> */}
@@ -69,19 +69,19 @@ export default function Contact() {
                                         <input type="text" className="form-control" id="lName" aria-describedby="lastNameHelp" placeholder='Last Name' />
                                     </div>
                                 </div>
-                                                            <div className="col-md-6 col-11">
+                                                            <div className=" col-11 col-lg-12">
                                 <div className="mb-3">
                                     <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
                                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email Address' />
                                 </div>
                             </div>
-                            <div className="col-md-6 col-11">
+                            <div className="col-11 col-lg-12">
                                 <div className="mb-3">
                                     <label htmlFor="subject" className="form-label ">Subject</label>
                                     <input type="text" className="form-control" id="subject" aria-describedby="subjectHelp" placeholder='Subject' />
                                 </div>
                             </div>
-                            <div className="col-md-6 col-11">
+                            <div className=" col-11 col-lg-12">
                                 <div className="mb-3">
                                     <label htmlFor="message" className="form-label">Your Message</label>
                                     <textarea className="form-control" id="message" rows={3} placeholder='Your Message'></textarea>

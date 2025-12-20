@@ -30,6 +30,29 @@
     height: 48px;
     border-radius: 50%;
 }
+.swiper-prev,
+.swiper-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(211, 211, 211,0.5);
+  color: #1b90c6;
+  border: none;
+  aspect-ratio: 1/1;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+border-radius: 50%;
+}
+
+.swiper-prev { left: -20px; }
+.swiper-next { right: -20px; }
+
 .brand-img {
   width: 100%;
   max-width: 140px;   

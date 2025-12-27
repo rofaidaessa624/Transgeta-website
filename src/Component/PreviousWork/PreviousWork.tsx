@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import WorkCard from "../WorkCard/WorkCard";
 
 export default function PreviousWork() {
-  const { t, i18n } = useTranslation();
+const { t } = useTranslation();
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 

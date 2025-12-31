@@ -1,0 +1,126 @@
+.section {
+  background: #f7f9fc;
+}
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.errorBox {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+.wrapper {
+  padding: 40px 0 10px;
+}
+
+.card {
+  background: #f5f7fb;
+  border-radius: 18px;
+  padding: 26px 22px 18px;
+  box-shadow: 0 10px 24px rgba(16, 24, 40, 0.06);
+}
+
+.header {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: #0b1220;
+}
+
+.subtitle {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+/* ✅ Slider Area */
+.sliderWrap {
+  position: relative;
+  padding: 6px 72px 0;
+}
+
+/* Swiper */
+.swiper {
+  padding: 12px 6px 10px;
+}
+
+/* Slide */
+.slide {
+  height: auto;
+}
+
+/* ✅ nav buttons */
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 10px 18px rgba(16, 24, 40, 0.12);
+  font-size: 26px;
+  line-height: 46px;
+  text-align: center;
+  color: #334155;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev {
+  left: 18px;
+}
+
+.next {
+  right: 18px;
+}
+
+.navBtn:active {
+  transform: translateY(-55%) scale(0.97);
+}
+
+/* ✅ progress bar */
+.progressBar {
+  margin: 12px auto 0;
+  width: 160px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.35);
+  overflow: hidden;
+}
+
+.progressLine {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.9);
+  transition: width 300ms ease;
+}
+
+/* ✅ responsive */
+@media (max-width: 575px) {
+  .sliderWrap {
+    padding: 8px 55px 0;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .header {
+    text-align: center;
+  }
+}

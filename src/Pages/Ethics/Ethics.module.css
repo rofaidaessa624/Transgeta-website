@@ -1,210 +1,47 @@
 .section {
-  background: #f7f9fc;
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh;
+  background: #ffffff;
 }
 
-.section::before {
-  content: "";
-  position: absolute;
-  top: -120px;
-  right: -120px;
-  width: 320px;
-  height: 320px;
-  background: rgba(13, 110, 253, 0.10);
-  border-radius: 50%;
-  filter: blur(16px);
-}
-
-.section::after {
-  content: "";
-  position: absolute;
-  bottom: -140px;
-  left: -140px;
-  width: 380px;
-  height: 380px;
-  background: rgba(0, 31, 84, 0.10);
-  border-radius: 50%;
-  filter: blur(18px);
-}
-
-.title {
-  font-size: 2.4rem;
+.pageTitle {
+  font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 900;
   color: #111827;
   margin-bottom: 10px;
-  position: relative;
-  z-index: 2;
 }
 
-.subtitle {
-  color: #4b5563;
-  max-width: 900px;
+.pageSubtitle {
+  color: #6b7280;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 820px;
   margin: 0 auto;
-  font-size: 1.05rem;
-  line-height: 1.9;
-  position: relative;
-  z-index: 2;
 }
 
-.card {
+.articleCard {
   background: #ffffff;
-  border-radius: 20px;
-  padding: 22px;
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  height: 100%;
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.10);
-}
-
-.iconBox {
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-  background: #0d6efd;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 14px;
-  box-shadow: 0 12px 24px rgba(13, 110, 253, 0.25);
-}
-
-.cardTitle {
-  font-size: 1.05rem;
-  font-weight: 900;
-  margin-bottom: 8px;
-  color: #111827;
-}
-
-.cardDesc {
-  margin: 0;
-  color: #4b5563;
-  font-size: 0.98rem;
-  line-height: 1.7;
-}
-
-.box {
-  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 22px;
-  padding: 34px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 30px 28px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
 }
 
-.boxTitle {
-  font-weight: 900;
-  color: #111827;
-  font-size: 1.45rem;
-  margin-bottom: 14px;
-}
-
-.paragraph {
+.articleBody {
+  white-space: pre-line;
+  line-height: 2;
   font-size: 1.05rem;
-  line-height: 1.9;
   color: #374151;
-  margin-bottom: 14px;
-}
-
-.highlight {
-  margin-top: 18px;
-  padding: 18px;
-  border-radius: 18px;
-  background: rgba(13, 110, 253, 0.08);
-  border: 1px solid rgba(13, 110, 253, 0.18);
-  color: #0d6efd;
-  font-weight: 800;
-  line-height: 1.8;
-}
-
-.articleHeader {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  margin-bottom: 18px;
-}
-
-.articleIcon {
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
-  background: rgba(13, 110, 253, 0.10);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0d6efd;
-  flex-shrink: 0;
-}
-
-.articleTitle {
   margin: 0;
-  font-weight: 900;
-  font-size: 1.6rem;
-  color: #111827;
-}
-
-.articleSub {
-  margin: 6px 0 0 0;
-  color: #4b5563;
-  line-height: 1.7;
-}
-
-.articleBox {
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 34px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.articleSection + .articleSection {
-  margin-top: 22px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.sectionTitle {
-  font-weight: 900;
-  font-size: 1.15rem;
-  color: #0d6efd;
-  margin-bottom: 10px;
-}
-
-.sectionBody {
-  margin: 0;
-  color: #374151;
-  font-size: 1.05rem;
-  line-height: 1.9;
-}
-
-.techBox {
-  background: linear-gradient(135deg, rgba(13, 110, 253, 0.10), rgba(0, 31, 84, 0.06));
-  border-radius: 22px;
-  padding: 34px;
-  border: 1px solid rgba(13, 110, 253, 0.14);
-}
-
-.list {
-  margin: 0;
-  padding-left: 18px;
-  display: grid;
-  gap: 10px;
-  color: #111827;
-  font-size: 1rem;
-  line-height: 1.8;
 }
 
 .rtl {
   direction: rtl;
   text-align: right;
+  font-family: "Cairo", sans-serif;
 }
 
-.rtl .list {
-  padding-left: 0;
-  padding-right: 18px;
+@media (max-width: 768px) {
+  .articleCard {
+    padding: 22px 18px;
+  }
 }

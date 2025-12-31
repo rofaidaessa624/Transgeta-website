@@ -1,37 +1,46 @@
-import ReactCountryFlag from "react-country-flag";
-import { FaArrowsAltH } from "react-icons/fa";
+import styles from "./ConvertLang.module.css";
+import { useTranslation } from "react-i18next";
+
+type Props = {
+  fromKey: string;
+  toKey: string;
+  fromCountry: string;
+  toCountry: string;
+  descKey: string;
+};
+
+export default function ConvertLang({
+  fromKey,
+  toKey,
+  fromCountry,
+  toCountry,
+  descKey,
+}: Props) {
+  const { t } = useTranslation();
+ console.warn("✅ ConvertLang Props:", { fromKey, toKey, fromCountry, toCountry, descKey });
+console.warn("✅ Lang Test:", t("languages.english"));
 
 
-export default function ConvertLang({fromLang,toLang}: { fromLang: string; toLang: string }) {
+const fromLang = t(`languages.${fromKey}`, { defaultValue: fromKey });
+const toLang = t(`languages.${toKey}`, { defaultValue: toKey });
+
+
+  // ✅ flags من النت
+  const fromFlagUrl = `https://flagcdn.com/w40/${fromCountry}.png`;
+  const toFlagUrl = `https://flagcdn.com/w40/${toCountry}.png`;
+
   return (
-    <>
-    <div className="card">
-  <div className="card-body">
-    <div className="row w-auto ">
-        <div className="col-auto my-3">
-            <div className="bg-body-secondary rounded-5 px-2 py-1 d-flex flex-wrap gap-2">
-      <ReactCountryFlag
-        countryCode="EG"
-        svg
-        title="Egypt"
-        className="rounded-2"
-      />
-            <ReactCountryFlag
-        countryCode="EG"
-        svg
-        title="Egypt"
-                className="rounded-2"
-      />
-            </div>
-        </div>
+    <div className={styles.langCard}>
+      <div className={styles.flagsPill}>
+        <img src={fromFlagUrl} className={styles.flagImg} alt={fromLang} />
+        <img src={toFlagUrl} className={styles.flagImg} alt={toLang} />
+      </div>
 
+      <h3 className={styles.langTitle}>
+        {fromLang} <span className={styles.arrow}>↔</span> {toLang}
+      </h3>
+
+      <p className={styles.desc}>{t(descKey)}</p>
     </div>
-    <h5 className="card-title">{fromLang} <FaArrowsAltH/> {toLang}</h5>
-    <p className="card-text">
-     Accurate translation for documents, websites, legal and business content between Arabic and English
-     </p>
-  </div>
-</div>
-    </>
-  )
+  );
 }

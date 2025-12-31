@@ -4,6 +4,7 @@ import { Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./BrandsCarousal.module.css";
+import { useTranslation } from "react-i18next";
 
 const API_BASE_URL = "http://127.0.0.1:8000/api";
 const FILE_BASE_URL = "http://127.0.0.1:8000";
@@ -13,30 +14,26 @@ interface Partner {
   name: string;
   website_url: string | null;
   sort_order: number | null;
-
-  // بعض الـ APIs بترجع ده:
   logo_url?: string | null;
-
-  // وبعضها (بعد التعديل اللي اتفقنا عليه) بترجع ده:
   logo_path?: string | null;
 }
 
 function getPartnerLogo(partner: Partner) {
-  // 1) لو backend بيرجع logo_url كامل
   if (partner.logo_url && partner.logo_url.startsWith("http")) {
     return partner.logo_url;
   }
 
-  // 2) لو backend بيرجع logo_path (اسم ملف فقط)
   if (partner.logo_path) {
     return `${FILE_BASE_URL}/files/partners/${partner.logo_path}`;
   }
 
-  // 3) fallback
   return "/images/default-logo.png";
 }
 
 export default function BrandsCarousal() {
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
+
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
@@ -67,10 +64,7 @@ export default function BrandsCarousal() {
       <section className={styles.section}>
         <div className="container">
           <div className={styles.header}>
-            <h2 className={styles.title}>Our Partners</h2>
-            <p className={styles.subtitle}>
-              Trusted by organizations around the world
-            </p>
+            <h2 className={styles.title}>{t("partners.title")}</h2>
           </div>
 
           <div className="row justify-content-center">
@@ -93,14 +87,11 @@ export default function BrandsCarousal() {
       <section className={styles.section}>
         <div className="container text-center">
           <div className={styles.header}>
-            <h2 className={styles.title}>Our Partners</h2>
-            <p className={styles.subtitle}>
-              Trusted by organizations around the world
-            </p>
+            <h2 className={styles.title}>{t("partners.title")}</h2>
           </div>
 
           <div className={styles.errorBox}>
-            <p className="m-0">Failed to load partners. Please try again later.</p>
+            <p className="m-0">{t("partners.error")}</p>
           </div>
         </div>
       </section>
@@ -111,31 +102,29 @@ export default function BrandsCarousal() {
 
   return (
     <section className={styles.section}>
-      <div className="container">
+      <div className={`container ${isArabic ? styles.rtl : ""}`}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Our Partners</h2>
-          <p className={styles.subtitle}>
-            Trusted by organizations and institutions across multiple sectors
-          </p>
+          <h2 className={styles.title}>{t("partners.title")}</h2>
         </div>
 
         <div className="row justify-content-center">
           <div className="col-12">
             <Swiper
               className={styles.swiper}
+              dir={isArabic ? "rtl" : "ltr"} // ✅ يخلي الاتجاه مظبوط في العربي
               breakpoints={{
-                0: { slidesPerView: 2, spaceBetween: 14 },
-                768: { slidesPerView: 3, spaceBetween: 18 },
-                992: { slidesPerView: 5, spaceBetween: 22 },
+                0: { slidesPerView: 2, spaceBetween: 12 },
+                768: { slidesPerView: 3, spaceBetween: 16 },
+                992: { slidesPerView: 5, spaceBetween: 18 },
               }}
               modules={[Autoplay]}
-              loop={true}
-              loopAdditionalSlides={10}
-              speed={4500} // ✅ smoother
+              loop
+              loopAdditionalSlides={12}
+              speed={7000} // ✅ smoother continuous
               autoplay={{
-                delay: 0, // ✅ continuous
+                delay: 0,
                 disableOnInteraction: false,
-                pauseOnMouseEnter: true, // ✅ hover pause
+                pauseOnMouseEnter: true,
               }}
               allowTouchMove={true}
             >
@@ -149,6 +138,7 @@ export default function BrandsCarousal() {
                     onClick={(e) => {
                       if (!partner.website_url) e.preventDefault();
                     }}
+                    title={partner.name}
                   >
                     <div className={styles.logoBox}>
                       <img
@@ -158,9 +148,6 @@ export default function BrandsCarousal() {
                         loading="lazy"
                       />
                     </div>
-
-                    {/* ✅ Partner Name */}
-                    <p className={styles.partnerName}>{partner.name}</p>
                   </a>
                 </SwiperSlide>
               ))}

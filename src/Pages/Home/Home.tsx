@@ -18,9 +18,9 @@ export default function Home() {
           <Accuracy/>
           <Professionalism/>
           <Testmonial/>
-          <Service/>
-          <BrandsCarousal/>
           <PreviousWork/>
+          <BrandsCarousal/>
+          <Service/>
     </main>
     {/* about */}
     {/* why not  */}

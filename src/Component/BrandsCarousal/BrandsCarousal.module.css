@@ -1,5 +1,11 @@
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+
 .section {
-  padding: 95px 0;
+  padding: 55px 0; /* ✅ أصغر من قبل */
   background: linear-gradient(135deg, #1b90c6 0%, #0d6efd 100%);
   position: relative;
   overflow: hidden;
@@ -11,11 +17,11 @@
   position: absolute;
   top: -80px;
   right: -120px;
-  width: 340px;
-  height: 340px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  filter: blur(20px);
+  background: rgba(255, 255, 255, 0.14);
+  filter: blur(22px);
 }
 
 .section::after {
@@ -23,8 +29,8 @@
   position: absolute;
   bottom: -120px;
   left: -120px;
-  width: 420px;
-  height: 420px;
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.12);
   filter: blur(35px);
@@ -34,22 +40,14 @@
   text-align: center;
   position: relative;
   z-index: 2;
-  margin-bottom: 26px;
+  margin-bottom: 16px;
 }
 
 .title {
   color: #ffffff;
   font-weight: 950;
-  font-size: clamp(1.9rem, 3vw, 2.5rem);
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  color: rgba(255, 255, 255, 0.85);
-  max-width: 720px;
-  margin: 0 auto;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  margin-bottom: 0;
 }
 
 /* Swiper */
@@ -65,7 +63,7 @@
   content: "";
   position: absolute;
   top: 0;
-  width: 90px;
+  width: 70px;
   height: 100%;
   z-index: 5;
   pointer-events: none;
@@ -89,74 +87,77 @@
   );
 }
 
-/* Partner card */
+/* ✅ Card = Logo Only */
 .partnerCard {
   text-decoration: none;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 12px;
-  padding: 18px 14px;
+  padding: 14px 10px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
-  min-height: 165px;
+  transition: all 0.25s ease;
+  min-height: 120px; /* ✅ أصغر */
 }
 
 .partnerCard:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.16);
   border-color: rgba(255, 255, 255, 0.28);
 }
 
 .logoBox {
-  width: 110px;
-  height: 72px;
+  width: 115px;
+  height: 70px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
 }
 
+/* ✅ subtle floating animation */
 .logo {
-  width: 80%;
-  height: 80%;
+  width: 82%;
+  height: 82%;
   object-fit: contain;
-  filter: grayscale(20%);
-  transition: all 0.3s ease;
+  filter: grayscale(30%);
+  transition: all 0.25s ease;
+  animation: floatLogo 3.5s ease-in-out infinite;
 }
 
 .partnerCard:hover .logo {
   filter: grayscale(0%);
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-.partnerName {
-  margin: 0;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #ffffff;
-  text-align: center;
-  line-height: 1.35;
-  opacity: 0.95;
+@keyframes floatLogo {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* Loading skeleton */
 .skeletonGrid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
+  gap: 14px;
   position: relative;
   z-index: 2;
 }
 
 .skeletonCard {
-  height: 165px;
+  height: 120px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.14);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -194,7 +195,7 @@
   background: rgba(0, 0, 0, 0.22);
   border: 1px solid rgba(255, 255, 255, 0.22);
   backdrop-filter: blur(6px);
-  padding: 18px 16px;
+  padding: 16px 14px;
   border-radius: 14px;
   color: rgba(255, 255, 255, 0.9);
   max-width: 520px;
@@ -212,7 +213,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 70px 0;
+    padding: 40px 0;
   }
 
   .skeletonGrid {
@@ -220,11 +221,16 @@
   }
 
   .partnerCard {
-    min-height: 150px;
+    min-height: 105px;
+  }
+
+  .logoBox {
+    width: 100px;
+    height: 64px;
   }
 
   .swiper::before,
   .swiper::after {
-    width: 55px;
+    width: 45px;
   }
 }

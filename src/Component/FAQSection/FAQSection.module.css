@@ -1,0 +1,126 @@
+.wrapper {
+  width: 100%;
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+/* ✅ Full width container */
+.containerFluid {
+  width: 100%;
+  padding: 0 70px;
+}
+
+.innerBox {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 20px;
+}
+
+/* ✅ RTL Support */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ✅ Image */
+.imageWrap {
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(16, 24, 40, 0.12);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* ✅ Title */
+.title {
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 25px;
+  color: #0b1220;
+  text-align: center;
+}
+
+/* ✅ FAQ box */
+.faqBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ✅ Item */
+.item {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+/* ✅ Question */
+.question {
+  width: 100%;
+  background: #ffffff;
+  border: none;
+  padding: 18px 22px;
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.qText {
+  flex: 1;
+  text-align: left;
+}
+
+.rtl .qText {
+  text-align: right;
+}
+
+/* ✅ Active Question */
+.active {
+  background: #0b91b8;
+  color: #ffffff;
+}
+
+.icon {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+/* ✅ Answer */
+.answer {
+  padding: 18px 22px;
+  margin: 0;
+  background: #ffffff;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 992px) {
+  .containerFluid {
+    padding: 0 15px;
+  }
+
+  .image {
+    height: 320px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}

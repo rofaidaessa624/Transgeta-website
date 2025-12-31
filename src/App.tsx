@@ -11,6 +11,8 @@ import Login from "./Pages/Login/Login";
 import SingleBlog from "./Pages/SingleBlog/SingleBlog";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import AllAcademicServices from "./Component/Services/AllAcademicServices";
+import AllTranslationServices from "./Component/Services/AllTranslationServices";
 
 function App() {
   const { i18n } = useTranslation();
@@ -29,11 +31,18 @@ function App() {
         { path: "ethics", element: <Ethics /> },
         { path: "resources", element: <Resources /> },
         { path: "about", element: <About /> },
+
+        // ✅ NEW PAGE: Translation Services
+        { path: "translation-services", element: <AllTranslationServices /> },
+{ path: "academic-services", element: <AllAcademicServices /> },
+
+        // ✅ Services page (existing)
         { path: "service", element: <Services /> },
+
         { path: "contact", element: <Contact /> },
 
-
-{ path: "articles/:id", element: <SingleBlog /> },
+        // ✅ Single article
+        { path: "articles/:id", element: <SingleBlog /> },
       ],
     },
     {

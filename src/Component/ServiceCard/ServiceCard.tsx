@@ -6,6 +6,7 @@ type Props = {
   bullets: string[];
   rating?: number;
   buttonText: string;
+  onButtonClick?: () => void; // ✅ new
 };
 
 export default function ServiceCard({
@@ -14,19 +15,19 @@ export default function ServiceCard({
   bullets,
   rating = 4.8,
   buttonText,
+  onButtonClick,
 }: Props) {
   const safeRating = Number.isFinite(rating) ? rating : 4.8;
 
   return (
     <div className={styles.card}>
-      {/* ✅ Image */}
       <div className={styles.imageWrapper}>
-<img
-  src={img}
-  alt={title}
-  className="w-100"
-  onError={(e) => (e.currentTarget.src = "/images/blogImage.jpg")}
-/>
+        <img
+          src={img}
+          alt={title}
+          className="w-100"
+          onError={(e) => (e.currentTarget.src = "/images/blogImage.jpg")}
+        />
       </div>
 
       <div className={styles.body}>
@@ -48,7 +49,9 @@ export default function ServiceCard({
             <span className={styles.stars}>★★★★★</span>
           </div>
 
-          <button className={styles.button}>{buttonText}</button>
+          <button className={styles.button} onClick={onButtonClick}>
+            {buttonText}
+          </button>
         </div>
       </div>
     </div>

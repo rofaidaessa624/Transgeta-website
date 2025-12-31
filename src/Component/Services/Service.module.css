@@ -42,7 +42,27 @@
   margin-top: 3px;
 }
 
-html[dir="rtl"] .listItem {
+/* html[dir="rtl"] .listItem {
   flex-direction: row-reverse;
   text-align: right;
+} */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* خلي السلايدر يمشي صح مع RTL */
+.rtl :global(.swiper) {
+  direction: rtl;
+}
+
+/* عشان الأسهم تتبدل */
+.rtl .prev {
+  left: auto;
+  right: 10px;
+}
+
+.rtl .next {
+  right: auto;
+  left: 10px;
 }

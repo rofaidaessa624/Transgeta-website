@@ -49,13 +49,6 @@
   display: block;
 }
 
-.coverFallback {
-  height: 320px;
-  border-radius: 26px;
-  background: linear-gradient(135deg, rgba(13,110,253,0.15), rgba(0,31,84,0.08));
-  margin-bottom: 28px;
-}
-
 .articleCard {
   background: #fff;
   border-radius: 26px;
@@ -79,18 +72,6 @@
   line-height: 1.25;
 }
 
-.content {
-  font-size: 1.05rem;
-  color: #374151;
-  line-height: 1.9;
-}
-
-.content h2 {
-  font-weight: 900;
-  margin-top: 32px;
-  margin-bottom: 16px;
-  color: #111827;
-}
 .summary {
   font-size: 1.08rem;
   color: #4b5563;
@@ -99,6 +80,49 @@
   margin-bottom: 22px;
 }
 
+.content {
+  font-size: 1.05rem;
+  color: #374151;
+  line-height: 1.9;
+}
+
+/* ✅ الأزرق الخط زي الصفحة */
+.contentLine {
+  position: relative;
+  padding-left: 26px;
+  margin-top: 10px;
+}
+
+.contentLine::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  background: #1d4ed8;
+  border-radius: 6px;
+}
+
+.content h2 {
+  font-size: 2.05rem;
+  font-weight: 900;
+  margin-top: 34px;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+.content h3 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.content p {
+  margin-bottom: 14px;
+}
 
 .content ul {
   padding-left: 18px;
@@ -107,6 +131,103 @@
 
 .content li {
   margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* ✅ Share Row */
+.shareRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin: 8px 0 18px;
+}
+
+.shareText {
+  font-weight: 700;
+  color: #111827;
+}
+
+.shareIcons {
+  display: flex;
+  gap: 10px;
+}
+
+.iconBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: #eef2ff;
+  color: #1d4ed8;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.iconBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* ✅ Related Posts Section */
+.relatedSection {
+  margin-top: 70px;
+}
+
+.relatedTitle {
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #111827;
+}
+
+.relatedCard {
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.07);
+  text-decoration: none;
+  transition: 0.25s ease;
+  height: 100%;
+}
+
+.relatedCard:hover {
+  transform: translateY(-6px);
+}
+
+.relatedImg img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.relatedContent {
+  padding: 18px 18px 22px;
+}
+
+.relatedPostTitle {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.relatedDate {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.relatedSummary {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
 }
 
 .loadingBox {
@@ -146,6 +267,17 @@
   text-align: right;
 }
 
+/* ✅ RTL fix للخط الأزرق */
+.rtl .contentLine {
+  padding-left: 0;
+  padding-right: 26px;
+}
+
+.rtl .contentLine::before {
+  left: auto;
+  right: 0;
+}
+
 @media (max-width: 768px) {
   .cover img {
     height: 260px;
@@ -155,5 +287,21 @@
   }
   .title {
     font-size: 1.8rem;
+  }
+
+  .shareRow {
+    justify-content: center;
+  }
+
+  .relatedTitle {
+    font-size: 1.6rem;
+  }
+
+  .relatedImg img {
+    height: 180px;
+  }
+
+  .content h2 {
+    font-size: 1.6rem;
   }
 }

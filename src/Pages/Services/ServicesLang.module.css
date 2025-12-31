@@ -1,0 +1,100 @@
+.wrapper {
+  padding: 30px 0 10px;
+}
+
+.card {
+  background: #f5f7fb;
+  border-radius: 14px;
+  padding: 22px 18px 18px;
+  box-shadow: 0 10px 24px rgba(16, 24, 40, 0.06);
+}
+
+.header {
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: #0b1220;
+}
+
+.subtitle {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.4;
+  max-width: 520px;
+}
+
+.sliderWrap {
+  position: relative;
+  padding: 8px 54px 0;
+  overflow: hidden; /* ✅ مهم */
+}
+
+.swiper {
+  padding: 14px 6px 14px; /* ✅ مهم */
+}
+
+.slide {
+  height: auto;
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 10px 22px rgba(16, 24, 40, 0.14);
+  font-size: 26px;
+  line-height: 46px;
+  text-align: center;
+  color: #168bd5;
+  cursor: pointer;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+.navBtn:active {
+  transform: translateY(-55%) scale(0.98);
+}
+
+.progressBar {
+  margin: 12px auto 0;
+  width: 150px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.3);
+  overflow: hidden;
+}
+
+.progressLine {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.9);
+  transition: width 300ms ease;
+}
+
+@media (max-width: 575px) {
+  .sliderWrap {
+    padding: 8px 46px 0;
+  }
+  .title {
+    font-size: 22px;
+  }
+}

@@ -48,27 +48,31 @@
     "items": [
       {
         "title": "Translation of Banking Documents – Bank of Oman Arab (2023)",
-        "desc": "In 2023, Trans-Gate handled the translation of a series of critical documents for Bank of Oman Arab, including financial reports, legal documents, and banking contracts. Our team ensured absolute accuracy in financial and banking terminology while meeting all required quality standards."
+        "desc": "In 2023, Trans-Gate handled the translation of a series of critical documents for Bank of Oman Arab, including financial reports, legal documents, and banking contracts. Our team focused on maintaining absolute accuracy in financial and banking terminology, helping the bank enhance communication with its clients and international partners. All projects were delivered on time and met the required standards, ensuring the highest levels of quality and thorough review."
       },
       {
         "title": "Regulatory Translation for Import and Sale of Alcoholic Beverages – Iraqi General Customs Authority (2022)",
-        "desc": "In 2022, Trans-Gate translated regulatory provisions governing the import and sale of alcoholic beverages. The work focused on legal precision and accurate interpretation of regulatory texts in compliance with international standards."
+        "desc": "In 2022, Trans-Gate translated regulations related to the import and sale of alcoholic beverages, covering legal provisions and regulatory texts. We emphasized precision in conveying legal details to ensure accurate understanding in various official and commercial contexts, fully complying with international standards for legal translation."
       },
       {
         "title": "Translation of Commercial Contracts and International Agreements – ICC (2020)",
-        "desc": "Trans-Gate translated commercial contracts and international agreements for the International Chamber of Commerce (ICC), ensuring legal accuracy and precise commercial terminology to facilitate international trade."
+        "desc": "In 2020, Trans-Gate translated commercial contracts and import-export agreements for the International Chamber of Commerce (ICC), an international organization representing companies and institutions from over 170 countries. The translation focused on legal accuracy and precise commercial terminology, facilitating smooth execution of agreements and promoting international trade, while adhering to the highest standards of quality and review."
       },
       {
-        "title": "Patent Translation – World Intellectual Property Organization (WIPO) (2025)",
-        "desc": "In 2025, Trans-Gate translated patents for WIPO, focusing on technical and scientific accuracy to protect intellectual property rights while adhering to strict quality and review standards."
+      "title": "Translation of Patents for the World Intellectual Property Organization (WIPO) – 2025",
+        "desc": "In 2025, Trans-Gate translated patents for the World Intellectual Property Organization (WIPO), the international agency specializing in intellectual property and patents. We focused on technical accuracy and scientific terminology to ensure the protection of inventors’ and companies’ rights, meeting deadlines while delivering high-quality translations subject to meticulous review for consistency and legal precision."
       },
       {
-        "title": "Academic Consulting for PhD Researchers – King Abdulaziz University (2024)",
-        "desc": "In 2024, Trans-Gate provided comprehensive academic consulting services for PhD researchers, including research design support, data analysis, and professional academic writing to meet publication and academic review requirements."
+        "title": "Academic Consulting for PhD Researchers – King Abdulaziz University, Saudi Arabia – 2024",
+        "desc": "In 2024, Trans-Gate provided comprehensive consulting to several PhD students at King Abdulaziz University, Saudi Arabia. Our services included support in research design, data analysis, and professional drafting of research chapters. We emphasized enhancing academic writing quality and ensuring clarity and coherence of ideas, helping researchers elevate their work to meet publication and academic review standards."
       },
       {
-        "title": "Academic Consulting for Researchers – King Saud University (2024)",
-        "desc": "During the same year, Trans-Gate delivered advanced academic consulting services for researchers at King Saud University, focusing on improving research quality, data analysis, reference organization, and academic drafting."
+        "title": "Academic Consulting for Researchers – King Saud University, Saudi Arabia – 2024",
+        "desc": "In the same year, we provided advanced academic consulting for researchers at King Saud University, Saudi Arabia, including support in study preparation, scientific review, and guidance to improve research quality. Our team focused on practical solutions to enhance result analysis, organize references, and draft conclusions with academic precision, enabling researchers to submit rigorous studies aligned with national and international university standards."
+      },
+       {
+        "title": "Academic Consulting for a Master’s Researcher, College of Arts – Capital Normal University, China – 2024",
+        "desc": "In 2024, Trans-Gate provided specialized academic consulting for a master’s researcher at the College of Arts, Capital Normal University, China. Our services focused on guiding the researcher in developing the theoretical framework, selecting the appropriate research methodology, and organizing ideas clearly. We also provided detailed review of abstracts and academic chapters to ensure compliance with international standards, helping the researcher deliver a complete and distinguished project on schedule."
       }
     ]
   },
@@ -87,7 +91,7 @@
     "translationTitle": "Translation Services",
     "translationDesc": "We provide accurate, professional translations for academic papers, research, and official documents while preserving meaning, tone, and academic integrity.",
     "consultingTitle": "Academic Consulting",
-    "consultingDesc": "Our consulting services aim to enhance the quality of your research, strengthen its structure, improve academic impact, and support critical thinking and clear academic writing.",
+    "consultingDesc": "Our expert consultations help refine your research, enhance structure, and maximize academic impact. We support critical thinking, effective communication, and the achievement of your full scholarly potential.",
     "card1Title": "Translation Services",
     "card1Desc": "Precise and professional translation for academic and official documents.",
     "card2Title": "Academic Excellence",
@@ -123,7 +127,7 @@
   "desc2": "From graduation certificates and legal contracts to theses, dissertations, and medical reports—TransGate is your trusted partner for all translation needs.",
 
   "emailTitle": "Email",
-  "emailValue": "info@transgatescd.online",
+  "emailValue": "transgateac@outlook.com",
   "hoursTitle": "Work Hours",
   "hoursValue": "Everyday 08:00 - 18:00",
   "phoneTitle": "Phone",
@@ -152,21 +156,54 @@
     ]
   },
 
-"languages": {
-  "arabic": "Arabic",
-  "english": "English",
-  "french": "French",
-  "spanish": "Spanish"
-},
+  "lang": {
+    "ar": "Arabic",
+    "en": "English",
+    "fr": "French",
+    "es": "Spanish",
+    "it": "Italian",
+    "el": "Greek",
+    "ru": "Russian",
+    "uk": "Ukrainian",
+    "bg": "Bulgarian",
+    "zh": "Chinese",
+    "tr": "Turkish",
+    "de": "German",
+    "sr": "Serbian",
+    "pt": "Portuguese",
+    "ur": "Urdu",
+    "fa": "Persian",
+    "ro": "Romanian",
+    "ko": "Korean"
+  },
   "services": {
     "pageTitle": "Services",
     "orderNow" :"Order Now",
     "seeMore" : "See More",
-    "langSection": {
-      "title": "Professional Translation Services",
-      "subtitle": "High-quality human translation between Arabic, English, and multiple international languages."
-    },
+   "langSection": {
+  "title": "Professional Translation Services",
+  "subtitle": "High-quality human translation between Arabic, English, and multiple international languages.",
 
+  "en_fr": "High-quality English–French translation for contracts, academic content and official documents.",
+"fr_en": "Professional French–English translation for reports, research and business communication.",
+
+"en_ar": "Accurate English–Arabic translation for legal, business and academic documents.",
+"fr_ar": "Professional French–Arabic translation for legal and official documents.",
+"es_en": "Clear Spanish–English translation for business and academic content.",
+"it_en": "Professional Italian–English translation for reports and documentation.",
+"ru_en": "Accurate Russian–English translation for research and business documents.",
+"uk_en": "Professional Ukrainian–English translation for official and academic writing.",
+"bg_en": "Reliable Bulgarian–English translation for contracts and manuals.",
+"zh_en": "High-quality Chinese–English translation for trade and communication.",
+"tr_en": "Accurate Turkish–English translation for business and official purposes.",
+"sr_en": "Clear Serbian–English translation for documents and guides.",
+"pt_en": "Professional Portuguese–English translation for corporate and academic content.",
+"ro_en": "Accurate Romanian–English translation for official and academic documents.",
+"en_ro": "Professional English–Romanian translation for reports and legal documents.",
+"ko_ar": "Korean–Arabic translation for personal documents, business and official communication.",
+"ar_ko": "Arabic–Korean translation for business, tourism and academic content."
+
+},
 "translation" :{
 "title":"Translation Services",
 "pageTitle" :"All Translation Services"
@@ -212,24 +249,28 @@
     "title": "Clients Questions",
     "items": {
       "q1": {
-        "q": "Do you provide certified translation?",
-        "a": "Yes. We offer officially certified translation for all types of documents, accepted by embassies, government offices, universities, and institutions."
+        "q": "How do you ensure translation accuracy?",
+        "a": "Our team combines linguistic expertise with subject-specific knowledge. Each translation undergoes multiple quality checks to maintain meaning, tone, and academic integrity."
       },
       "q2": {
-        "q": "How can I send my documents?",
-        "a": "You can send your documents via WhatsApp, email, or upload them directly through our platform."
+        "q": "Can Trans-Gate help with non-academic texts?",
+        "a": "Yes. While our focus is academic, we also provide professional translations for business, technical, and personal documents upon request."
       },
       "q3": {
-        "q": "How long does the translation take?",
-        "a": "Delivery time depends on the document type and size. However, we always ensure on-time delivery based on the agreed deadline."
+        "q": "How do I start a translation or consultation project?",
+        "a": "Submit your document or project details via our website. Our team will review it and provide a personalized plan with timelines and pricing."
       },
       "q4": {
-        "q": "Can you translate academic research and theses?",
-        "a": "Absolutely. We specialize in translating academic papers, research, theses, dissertations, and scientific studies while preserving accuracy and academic integrity."
+        "q": "How long does a typical translation take?",
+        "a": "Delivery times depend on the document’s length and complexity. We provide an estimated timeline upon review, ensuring quality is never compromised."
       },
       "q5": {
-        "q": "Do you offer medical translation?",
-        "a": "Yes. We provide accurate medical translation for reports, prescriptions, and health-related documents with full confidentiality."
+        "q": "Can you handle urgent or last-minute requests?",
+        "a": "Yes. We offer expedited services while maintaining professional standards. Contact us to discuss your specific needs and deadlines."
+      },
+       "q6": {
+        "q": "Do you offer revisions or edits after translation?",
+        "a": "Absolutely. We allow revisions to ensure the translation meets your expectations and accurately conveys your ideas."
       }
     }
   },
@@ -237,9 +278,9 @@
     "pageName": "About Us",
     "title": "About TransGate",
     "subtitle": "We enrich knowledge. We empower minds.",
-    "paragraph1": "TransGate is dedicated to enriching knowledge and empowering minds by providing professional translation services for all types of documents, with a strong focus on accuracy, clarity, and impact in every word. Our approach goes beyond literal translation to convey the full meaning, tone, and academic integrity of your content.",
-    "paragraph2": "In addition to translation services, we offer specialized academic consultations to support students and researchers in organizing their projects, improving clarity, and enhancing academic impact. Our goal is to help you present your ideas effectively and achieve your best results.",
-    "paragraph3": "TransGate operates with core values rooted in accuracy, integrity, professionalism, and client empowerment. We pay close attention to detail while maintaining clarity and inspiration—ensuring every client receives services and guidance that elevate the quality of their work and strengthen their academic journey.",
+    "paragraph1": "Trans-Gate is dedicated to bridging knowledge and empowering minds. We provide professional translation services for all Documents, ensuring every word is precise, clear, and impactful. Our approach goes beyond language, focusing on conveying the full meaning, tone, and academic integrity of your work.",
+    "paragraph2": "Alongside translation, we offer expert academic consultations. We guide students and researchers in structuring their projects, enhancing clarity, and maximizing academic impact. Our mission is to support your intellectual growth, helping you communicate ideas effectively and achieve your highest potential.",
+    "paragraph3": "At Trans-Gate, our core values of accuracy, integrity, professionalism, and client empowerment shape every project. We combine meticulous attention to detail with a commitment to inspiration and clarity, ensuring each client receives guidance and service that elevates their work and strengthens their academic journey.",
 
     "coreValuesTitle": "Our Core Values",
     "coreValues": {
@@ -317,12 +358,13 @@
     "mission": {
       "title": "Our Mission",
       "subtitle": "We provide high-quality academic translation and expert guidance that strengthens research and builds confidence.",
-      "paragraph": "We strive to deliver accurate, high-quality academic and scientific translations while offering specialized consultations that improve research quality and organization. Our mission is to empower clients to achieve their best outcomes through language support and guidance, while fostering a supportive environment that builds confidence and promotes continuous academic growth.",
+      "paragraph": "Our mission is to deliver precise and high-quality academic and scientific translations while providing expert consultations to enhance research quality and structure. We aim to empower our clients to reach their full potential through linguistic support and guidance, fostering a supportive environment that builds confidence and promotes continuous academic growth.",
+
       "bullets": {
-        "b1": "Deliver accurate, high-quality scientific and academic translations.",
-        "b2": "Provide specialized academic consultations to enhance research quality and organization.",
-        "b3": "Empower clients to reach their full potential through language support and guidance.",
-        "b4": "Create a supportive environment that builds confidence and encourages continuous academic development."
+        "b1": "Provide accurate, professional academic and scientific translations.",
+        "b2": "Offer expert academic consultations to improve research and structure.",
+        "b3": "Help clients reach their full potential through language and guidance.",
+        "b4": "Create a supportive environment that promotes confidence and academic growth."
       },
       "cards": {
         "accurateTranslations": "Accurate and professional scientific & academic translations.",
@@ -334,14 +376,9 @@
 
     "vision": {
       "title": "Our Vision",
-      "subtitle": "To be a leading gateway to knowledge where clear communication and expert guidance empower minds and develop ideas globally.",
-      "paragraph": "To become a leading gateway to knowledge, where clear communication and expert guidance empower minds and develop ideas globally.",
-      "points": {
-        "p1": "Expand global impact by connecting language with knowledge worldwide.",
-        "p2": "Support academic and professional excellence through expert guidance.",
-        "p3": "Maintain integrity and confidentiality in official and sensitive documents.",
-        "p4": "Empower individuals by enhancing clarity, structure, and confidence."
-      },
+      "subtitle": "To be a leading gateway for knowledge, where precise communication and expert guidance empower minds and elevate ideas worldwide.",
+      "paragraph": "To be a leading gateway for knowledge, where precise communication and expert guidance empower minds and elevate ideas worldwide.",
+   
       "footer": "At TransGate, we believe language is never a barrier — it is a bridge to knowledge."
     },
 
@@ -416,7 +453,7 @@
   },
   
   "footer": {
-    "desc": "Professional translation and academic consulting — delivering clarity, accuracy, and impact worldwide.",
+    "desc": "Experience seamless access to Trans-Gate’s translation and academic consultation services. Our streamlined process allows you to submit your documents, request consultations, and receive expert support quickly and efficiently, saving you time while ensuring high-quality results.",
     "quickLinks": "Quick Links",
     "links": {
       "about": "About Us",
@@ -435,18 +472,15 @@
 
   "ethics": {
     "article": {
-      "title": "Ethics Policy",
-      "subtitle": "Our commitment to professional and ethical standards",
+      "title": "integrity and ethical policy",
       "body": "..."
     },
     "disclaimer": {
       "title": "Disclaimer on Academic Integrity and Ethical Policy",
-      "body1": "Trans-Gate is committed to providing translation and educational support services in line with high professional and ethical standards. Our mission is to deliver accurate, clear, and helpful guidance while promoting honest learning and academic integrity. We offer translation, tutoring, editing, reviewing, and consultation services for students, researchers, and professionals who seek to expand their knowledge, improve academic writing, and develop research skills.",
-      "body2": "We do not complete assignments, write research papers, theses, dissertations, or any academic work on behalf of clients, nor do we create or alter content in ways that mislead or violate ethical standards.",
-      "body3": "By using our services, you accept full responsibility for your academic or professional work. Our role is to guide and support, not to replace your effort. Any assistance provided, including research support, translation, feedback, or editing, is intended solely for learning, improvement, or communication purposes. Misusing our services is strictly prohibited.",
-      "body4": "Submitting translations, advice, suggestions, or reviewed materials as original work without proper acknowledgment violates both academic integrity and professional ethics, and Trans-Gate does not condone such actions. Clients are responsible for ensuring that any materials or guidance they receive comply with relevant laws, regulations, and the academic or ethical policies of their institutions.",
-      "body5": "Trans-Gate is not liable for how its services are used, and clients bear full responsibility for the final use of any materials, notes, or consultations provided. We reserve the right to refuse service to anyone attempting to misuse our platform for academic dishonesty, information manipulation, or other unethical purposes. By continuing to use our services, clients agree to comply with this ethics policy and to support responsible, ethical learning and professional practices."
-    }
+      "body1": "Trans-Gate is committed to providing translation and educational support services in line with high professional and ethical standards. Our mission is to deliver accurate, clear, and helpful guidance while promoting honest learning and academic integrity. We offer translation, tutoring, editing, reviewing, and consultation services for students, researchers, and professionals who seek to expand their knowledge, improve academic writing, and develop research skills. We do not complete assignments, write research papers, theses, dissertations, or any academic work on behalf of clients, nor do we create or alter content in ways that mislead or violate ethical standards.",
+      "body2": "By using our services, you accept full responsibility for your academic or professional work. Our role is to guide and support, not to replace your effort. Any assistance provided, including research support, translation, feedback, or editing, is intended solely for learning, improvement, or communication purposes. Misusing our services is strictly prohibited. Submitting translations, advice, suggestions, or reviewed materials as original work without proper acknowledgment violates both academic integrity and professional ethics, and Trans-Gate does not condone such actions.",
+      "body3": "Clients are responsible for ensuring that any materials or guidance they receive comply with relevant laws, regulations, and the academic or ethical policies of their institutions. Trans-Gate is not liable for how its services are used, and clients bear full responsibility for the final use of any materials, notes, or consultations provided. We reserve the right to refuse service to anyone attempting to misuse our platform for academic dishonesty, information manipulation, or other unethical purposes.",
+      "body4": "By continuing to use our services, clients agree to comply with this ethics policy and to support responsible, ethical learning and professional practices."
   },
 
   "contact": {
@@ -489,6 +523,9 @@
   },
 
   "article": {
+    "title":{
+      "title":"integrity and ethical policy"
+    },
     "single": {
       "pageName": "Blog Details",
       "loading": "Loading article...",
@@ -572,5 +609,11 @@
         "file": "Please upload a PDF file"
       }
     }
+  },
+  "loading": {
+    "title": "Loading...",
+    "desc": "Please wait while we fetch the data."
   }
 }
+  }
+

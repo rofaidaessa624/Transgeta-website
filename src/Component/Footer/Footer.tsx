@@ -2,7 +2,7 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/abfc1ea0-56f6-47a8-b323-afbc9719c964/tr-removebg-preview (1).png";
 
-import { FaWhatsapp, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaWhatsapp, FaFacebookF, FaLinkedinIn, FaTiktok, FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
@@ -21,7 +21,7 @@ export default function Footer() {
             <p className="tg-footer-desc">{t("footer.desc")}</p>
 
             <div className="tg-footer-contact">
-              <a href="mailto:info@transgateacd.com">info@transgateacd.com</a>
+              <a href="mailto:transgateac@outlook.com">transgateac@outlook.com</a>
               <a href="tel:+2001098396598">+20 01098396598</a>
             </div>
 
@@ -35,15 +35,22 @@ export default function Footer() {
                 <FaWhatsapp />
               </a>
 
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <a href="https://www.facebook.com/people/Trans-Gate-for-Translation-Services-and-Academic-Consultations/61565149277304/?rdid=HQh4qJxHvGzS4X6K&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17bfQjR8BT%2F" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebookF />
               </a>
 
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://www.tiktok.com/@trans.gate5?_r=1&_t=ZS-92she7bLNYX" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <FaTiktok />
+              </a>
+               <a href="https://www.instagram.com/trans_gate?igsh=dWl3cTBkZ2MzcWZx" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <FaInstagram />
+              </a>
+
+              <a href="https://www.linkedin.com/in/trans-gate-06836a3a4/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <FaLinkedinIn />
               </a>
 
-              <a href="mailto:info@transgateacd.online" aria-label="Email">
+              <a href="mailto:transgateac@outlook.com" aria-label="Email">
                 <MdEmail />
               </a>
             </div>

@@ -5,9 +5,41 @@ import { FiPhone } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import styles from "./Contact.module.css";
 
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+
 export default function Contact() {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
+
+  // ✅ تحديد النوع + initial value
+  const formRef = useRef<HTMLFormElement | null>(null);
+
+  // ✅ تحديد نوع الحدث
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // ✅ حماية: لو ref null متكملش
+    if (!formRef.current) return;
+
+    emailjs
+      .sendForm(
+        "service_3txx7tn",
+        "template_5mu0k14",
+        formRef.current,
+        "5fnuW14NvVG58K0Gb"
+      )
+      .then(
+        () => {
+          alert(t("contact.form.success")); // ✅ رسالة نجاح
+          formRef.current?.reset(); // ✅ reset آمن
+        },
+        (error) => {
+          alert(t("contact.form.error")); // ✅ رسالة خطأ
+          console.log("EmailJS Error:", error.text);
+        }
+      );
+  };
 
   return (
     <>
@@ -28,8 +60,10 @@ export default function Contact() {
                 <div className={styles.iconBox}>
                   <FontAwesomeIcon icon={faEnvelopeOpenText} />
                 </div>
-                <h5 className={styles.cardTitle}>{t("contact.info.email.title")}</h5>
-                <p className={styles.cardText}>info@transgatescd.online</p>
+                <h5 className={styles.cardTitle}>
+                  {t("contact.info.email.title")}
+                </h5>
+                <p className={styles.cardText}>transgateac@outlook.com</p>
               </div>
             </div>
 
@@ -38,8 +72,12 @@ export default function Contact() {
                 <div className={styles.iconBox}>
                   <FontAwesomeIcon icon={faClock} />
                 </div>
-                <h5 className={styles.cardTitle}>{t("contact.info.hours.title")}</h5>
-                <p className={styles.cardText}>{t("contact.info.hours.value")}</p>
+                <h5 className={styles.cardTitle}>
+                  {t("contact.info.hours.title")}
+                </h5>
+                <p className={styles.cardText}>
+                  {t("contact.info.hours.value")}
+                </p>
               </div>
             </div>
 
@@ -48,7 +86,9 @@ export default function Contact() {
                 <div className={styles.iconBox}>
                   <FiPhone size={22} />
                 </div>
-                <h5 className={styles.cardTitle}>{t("contact.info.phone.title")}</h5>
+                <h5 className={styles.cardTitle}>
+                  {t("contact.info.phone.title")}
+                </h5>
                 <p className={styles.cardText}>+20 1098396598</p>
               </div>
             </div>
@@ -59,9 +99,12 @@ export default function Contact() {
             <div className="col-lg-10 col-12">
               <div className={`${styles.formCard} ${isArabic ? styles.rtl : ""}`}>
                 <h3 className={styles.formTitle}>{t("contact.form.title")}</h3>
-                <p className={styles.formSubtitle}>{t("contact.form.subtitle")}</p>
+                <p className={styles.formSubtitle}>
+                  {t("contact.form.subtitle")}
+                </p>
 
-                <form>
+                {/* ✅ الفورم مربوط بـ ref + onSubmit */}
+                <form ref={formRef} onSubmit={sendEmail}>
                   <div className="row g-4">
                     <div className="col-md-6 col-12">
                       <label className={styles.label} htmlFor="fName">
@@ -70,8 +113,10 @@ export default function Contact() {
                       <input
                         type="text"
                         id="fName"
+                        name="first_name"
                         className={styles.input}
                         placeholder={t("contact.form.firstNamePlaceholder")}
+                        required
                       />
                     </div>
 
@@ -82,8 +127,10 @@ export default function Contact() {
                       <input
                         type="text"
                         id="lName"
+                        name="last_name"
                         className={styles.input}
                         placeholder={t("contact.form.lastNamePlaceholder")}
+                        required
                       />
                     </div>
 
@@ -94,8 +141,10 @@ export default function Contact() {
                       <input
                         type="email"
                         id="email"
+                        name="user_email"
                         className={styles.input}
                         placeholder={t("contact.form.emailPlaceholder")}
+                        required
                       />
                     </div>
 
@@ -106,8 +155,10 @@ export default function Contact() {
                       <input
                         type="text"
                         id="subject"
+                        name="subject"
                         className={styles.input}
                         placeholder={t("contact.form.subjectPlaceholder")}
+                        required
                       />
                     </div>
 
@@ -117,9 +168,11 @@ export default function Contact() {
                       </label>
                       <textarea
                         id="message"
+                        name="message"
                         rows={4}
                         className={styles.textarea}
                         placeholder={t("contact.form.messagePlaceholder")}
+                        required
                       ></textarea>
                     </div>
                   </div>
@@ -128,10 +181,10 @@ export default function Contact() {
                     {t("contact.form.submit")}
                   </button>
                 </form>
+                {/* ✅ نهاية الفورم */}
               </div>
             </div>
           </div>
-
         </div>
       </section>
     </>

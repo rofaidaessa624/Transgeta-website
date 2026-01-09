@@ -68,6 +68,12 @@ export default function PreviousWork() {
       desc: t("previousWork.items.5.desc"),
       position: "bottom",
     },
+      {
+      img: "images/workCardImg5.png",
+      title: t("previousWork.items.6.title"),
+      desc: t("previousWork.items.6.desc"),
+      position: "top",
+    },
   ];
 
   return (

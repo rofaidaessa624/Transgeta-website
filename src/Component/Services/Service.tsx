@@ -42,14 +42,18 @@ export default function Service() {
       });
   }, []);
 
-const translationServices = services
-  .filter((s) => s.category === "translation")
-  .slice(0, 3);
+  // ✅ Sections (take only 3)
+  const translationServices = services
+    .filter((s) => s.category === "translation")
+    .slice(0, 3);
 
-const academicServices = services
-  .filter((s) => s.category === "academic")
-  .slice(0, 3);
+  const academicServices = services
+    .filter((s) => s.category === "academic")
+    .slice(0, 3);
 
+  // const religiousServices = services
+  //   .filter((s) => s.category === "religious")
+  //   .slice(0, 3);
 
   const getTitle = (s: Service) => (isArabic ? s.name_ar : s.name_en);
 
@@ -73,17 +77,24 @@ const academicServices = services
       ? `مرحباً، أريد طلب خدمة: ${serviceName}`
       : `Hello, I want to order this service: ${serviceName}`;
 
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+      message
+    )}`;
     window.open(url, "_blank");
   };
 
   if (loading) return <p className="text-center py-5">{t("loading")}</p>;
 
   return (
-    <section className="my-5">
+    <section className="my-5" dir={isArabic ? "rtl" : "ltr"}>
       <div className="container my-5">
+
         {/* ✅ Translation */}
-        <h2 className="fw-bolder my-5 display-5 text-center">
+        <h2
+          className="fw-bolder my-5 display-5 text-center"
+          dir={isArabic ? "rtl" : "ltr"}
+          style={{ textAlign: "center" }}
+        >
           {t("services.translation.title")}
         </h2>
 
@@ -97,7 +108,7 @@ const academicServices = services
                 <ServiceCard
                   img={getImg(service)}
                   title={title}
-                  bullets={bullets} // ✅ description بدل short_description
+                  bullets={bullets}
                   rating={5}
                   buttonText={t("services.orderNow")}
                   onButtonClick={() => openWhatsApp(title)}
@@ -108,7 +119,11 @@ const academicServices = services
         </div>
 
         {/* ✅ See More */}
-        <div className="text-left mt-4">
+        <div
+          className={`mt-4 d-flex ${
+            isArabic ? "justify-content-end" : "justify-content-start"
+          }`}
+        >
           <Link to="/translation-services" className="btn btn-dark px-4 py-2">
             {t("services.seeMore")}
           </Link>
@@ -117,7 +132,11 @@ const academicServices = services
         <hr className="my-5" />
 
         {/* ✅ Academic */}
-        <h2 className="fw-bolder my-5 display-5 text-center">
+        <h2
+          className="fw-bolder my-5 display-5 text-center"
+          dir={isArabic ? "rtl" : "ltr"}
+          style={{ textAlign: "center" }}
+        >
           {t("services.academic.title")}
         </h2>
 
@@ -140,13 +159,59 @@ const academicServices = services
             );
           })}
         </div>
-         {/* ✅ See More */}
-        <div className="text-left mt-4">
-         <Link to="/academic-services" className="btn btn-dark px-4 py-2">
-  {t("services.seeMore")}
-</Link>
 
+        {/* ✅ See More */}
+        <div
+          className={`mt-4 d-flex ${
+            isArabic ? "justify-content-end" : "justify-content-start"
+          }`}
+        >
+          <Link to="/academic-services" className="btn btn-dark px-4 py-2">
+            {t("services.seeMore")}
+          </Link>
         </div>
+
+        <hr className="my-5" />
+
+        {/* ✅ Religious Services */}
+        {/* <h2
+          className="fw-bolder my-5 display-5 text-center"
+          dir={isArabic ? "rtl" : "ltr"}
+          style={{ textAlign: "center" }}
+        >
+          {t("services.religious.title", isArabic ? "الخدمات الدينية" : "Religious Services")}
+        </h2>
+
+        <div className="row justify-content-between text-center gy-4">
+          {religiousServices.map((service) => {
+            const title = getTitle(service);
+            const bullets = toBullets(getDescription(service));
+
+            return (
+              <div key={service.id} className="col-lg-4 col-md-6 col-12">
+                <ServiceCard
+                  img={getImg(service)}
+                  title={title}
+                  bullets={bullets}
+                  rating={5}
+                  buttonText={t("services.orderNow")}
+                  onButtonClick={() => openWhatsApp(title)}
+                />
+              </div>
+            );
+          })}
+        </div> */}
+
+        {/* ✅ See More */}
+        {/* <div
+          className={`mt-4 d-flex ${
+            isArabic ? "justify-content-end" : "justify-content-start"
+          }`}
+        >
+          <Link to="/religious-services" className="btn btn-dark px-4 py-2">
+            {t("services.seeMore")}
+          </Link>
+        </div> */}
 
       </div>
     </section>

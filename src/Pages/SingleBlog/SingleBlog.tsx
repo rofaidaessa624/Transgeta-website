@@ -4,13 +4,12 @@ import Breadcrumb from "../../Component/Breadcrumb/Breadcrumb";
 import { useTranslation } from "react-i18next";
 import styles from "./SingleBlog.module.css";
 
-
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaWhatsapp,
-  FaTelegramPlane,
-} from "react-icons/fa";
+// import {
+//   FaFacebookF,
+//   FaInstagram,
+//   FaWhatsapp,
+//   FaTelegramPlane,
+// } from "react-icons/fa";
 
 type Article = {
   id: number;
@@ -21,7 +20,8 @@ type Article = {
   body_ar: string;
   body_en: string;
   image_url: string | null;
-  published_at: string;
+  published_at: string | null;
+  slug?: string;
 };
 
 const BASE_URL =
@@ -112,6 +112,19 @@ function renderRichBody(body: string) {
   return nodes;
 }
 
+/* ✅ Handles image_url if it's file name OR full url */
+function getImageSrc(image_url: string | null) {
+  if (!image_url) return FALLBACK_IMG;
+
+  // If backend returns full URL
+  if (image_url.startsWith("http://") || image_url.startsWith("https://")) {
+    return image_url;
+  }
+
+  // If backend returns file name
+  return `${BASE_URL}/files/articles/${image_url}`;
+}
+
 export default function SingleBlog() {
   const { id } = useParams<{ id: string }>();
   const { t, i18n } = useTranslation();
@@ -121,60 +134,76 @@ export default function SingleBlog() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
 
-  // ✅ Fetch article
   useEffect(() => {
     async function fetchArticle() {
       if (!id) return;
 
-try {
-  setLoading(true);
-  setError("");
+      try {
+        setLoading(true);
+        setError("");
 
+        // ✅ Use public endpoint (matches your working API)
+        const res = await fetch(`${BASE_URL}/api/public/articles/${id}`, {
+          headers: { Accept: "application/json" },
+        });
 
-  const res = await fetch(`${BASE_URL}/api/articles/${id}`, {
-    headers: { Accept: "application/json" },
-  });
+        if (!res.ok) {
+          throw new Error(`Failed to fetch article (status: ${res.status})`);
+        }
 
-  if (!res.ok) {
-    throw new Error(`Failed to fetch article (status: ${res.status})`);
-  }
+        const json = await res.json();
 
-  const json = await res.json();
+        // ✅ Works with both: {success,data:{article}} OR {success,data}
+        if (!json?.success || !json?.data) {
+          throw new Error("Invalid API response");
+        }
 
-  if (!json?.success || !json?.data) {
-    throw new Error("Invalid API response");
-  }
+        const fetched = json.data.article ?? json.data;
 
-  const article = json.data.article ?? json.data;
-  setArticle(article);
-
-} catch (err: unknown) {
-  if (err instanceof Error) {
-    setError(err.message);
-  } else {
-    setError("Something went wrong");
-  }
-} finally {
-  setLoading(false);
-}
-
+        setArticle(fetched);
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("Something went wrong");
+        }
+      } finally {
+        setLoading(false);
+      }
     }
 
     fetchArticle();
-  }, [id]); 
+  }, [id]);
 
   const title = isArabic ? article?.title_ar : article?.title_en;
   const summary = isArabic ? article?.summary_ar : article?.summary_en;
   const body = isArabic ? article?.body_ar : article?.body_en;
 
-  const imageSrc = article?.image_url
-    ? `${BASE_URL}/files/articles/${article.image_url}`
-    : FALLBACK_IMG;
+  const imageSrc = getImageSrc(article?.image_url ?? null);
 
   const richBody = useMemo(() => {
     if (!body) return null;
     return renderRichBody(body);
   }, [body]);
+
+  // ✅ Share Links (real links)
+  // const shareUrl = window.location.href;
+  // const shareTitle = encodeURIComponent(title || "Article");
+
+  // const facebookShare = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+  //   shareUrl
+  // )}`;
+
+  // const telegramShare = `https://t.me/share/url?url=${encodeURIComponent(
+  //   shareUrl
+  // )}&text=${shareTitle}`;
+
+  // const whatsappShare = `https://wa.me/?text=${shareTitle}%20${encodeURIComponent(
+  //   shareUrl
+  // )}`;
+
+  // Instagram doesn't support direct share url for web
+  // const instagramLink = "https://www.instagram.com/";
 
   return (
     <>
@@ -213,34 +242,63 @@ try {
               </div>
 
               {/* ✅ Share Row */}
-              <div className={styles.shareRow}>
+              {/* <div className={styles.shareRow}>
                 <span className={styles.shareText}>
                   {t("article.single.share")}
                 </span>
 
                 <div className={styles.shareIcons}>
-                  <a className={styles.iconBtn} href="#" aria-label="Facebook">
+                  <a
+                    className={styles.iconBtn}
+                    href={facebookShare}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
                     <FaFacebookF />
                   </a>
-                  <a className={styles.iconBtn} href="#" aria-label="Instagram">
+
+                  <a
+                    className={styles.iconBtn}
+                    href={instagramLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
                     <FaInstagram />
                   </a>
-                  <a className={styles.iconBtn} href="#" aria-label="WhatsApp">
+
+                  <a
+                    className={styles.iconBtn}
+                    href={whatsappShare}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp"
+                  >
                     <FaWhatsapp />
                   </a>
-                  <a className={styles.iconBtn} href="#" aria-label="Telegram">
+
+                  <a
+                    className={styles.iconBtn}
+                    href={telegramShare}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Telegram"
+                  >
                     <FaTelegramPlane />
                   </a>
                 </div>
-              </div>
+              </div> */}
 
               {/* ✅ Content Card */}
               <article className={styles.articleCard}>
                 <p className={styles.date}>
-                  {new Date(article.published_at).toLocaleDateString(
-                    isArabic ? "ar-EG" : "en-US",
-                    { year: "numeric", month: "long", day: "numeric" }
-                  )}
+                  {article.published_at
+                    ? new Date(article.published_at).toLocaleDateString(
+                        isArabic ? "ar-EG" : "en-US",
+                        { year: "numeric", month: "long", day: "numeric" }
+                      )
+                    : t("article.single.noDate")}
                 </p>
 
                 <h1 className={styles.title}>{title}</h1>

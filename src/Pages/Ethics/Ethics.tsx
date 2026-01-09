@@ -15,7 +15,6 @@ export default function Ethics() {
             {/* ✅ Header */}
             <div className={`text-center mb-5 ${isArabic ? styles.rtl : ""}`}>
               <h1 className={styles.pageTitle}>{t("ethics.article.title")}</h1>
-              <p className={styles.pageSubtitle}>{t("ethics.article.subtitle")}</p>
             </div>
 
             {/* ✅ Article Card */}
@@ -33,7 +32,6 @@ export default function Ethics() {
                 <p className={styles.articleBody}>{t("ethics.disclaimer.body2")}</p>
                 <p className={styles.articleBody}>{t("ethics.disclaimer.body3")}</p>
                 <p className={styles.articleBody}>{t("ethics.disclaimer.body4")}</p>
-                <p className={styles.articleBody}>{t("ethics.disclaimer.body5")}</p>
               </div>
             </div>
 

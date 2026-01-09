@@ -20,8 +20,9 @@ type SlideItem = {
   toKey: string;
   fromCountry: string;
   toCountry: string;
-  descKey: string;
+  descKey: string; // ✅ add this
 };
+
 
 export default function ServicesLang() {
   const swiperRef = useRef<SwiperType | null>(null);

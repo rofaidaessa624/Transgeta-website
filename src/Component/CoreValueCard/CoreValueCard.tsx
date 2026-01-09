@@ -59,9 +59,9 @@ export default function CoreValueCard({ title, desc, iconKey }: Props) {
 
           <h5 className={styles.cardTitle}>{title}</h5>
 
-   <p className={styles.frontSubtitle}>
+   {/* <p className={styles.frontSubtitle}>
   {t("about-us.coreValuesSection.hints.preview")}
-</p>
+</p> */}
 
 
           <p className={styles.hint}>

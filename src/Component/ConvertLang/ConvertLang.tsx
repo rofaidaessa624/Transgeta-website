@@ -6,7 +6,7 @@ type Props = {
   toKey: string;
   fromCountry: string;
   toCountry: string;
-  descKey: string;
+  descKey: string; // ✅ prop الصحيح
 };
 
 export default function ConvertLang({
@@ -14,18 +14,17 @@ export default function ConvertLang({
   toKey,
   fromCountry,
   toCountry,
-  descKey,
+  descKey, // ✅ استقبليه بنفس الاسم
 }: Props) {
   const { t } = useTranslation();
- console.warn("✅ ConvertLang Props:", { fromKey, toKey, fromCountry, toCountry, descKey });
-console.warn("✅ Lang Test:", t("languages.english"));
 
+  // ✅ أسماء اللغات من lang object داخل json
+  const fromLang = t(`lang.${fromKey}`, { defaultValue: fromKey });
+  const toLang = t(`lang.${toKey}`, { defaultValue: toKey });
 
-const fromLang = t(`languages.${fromKey}`, { defaultValue: fromKey });
-const toLang = t(`languages.${toKey}`, { defaultValue: toKey });
+  // ✅ ترجمة وصف الخدمة
+  const desc = t(descKey, { defaultValue: descKey });
 
-
-  // ✅ flags من النت
   const fromFlagUrl = `https://flagcdn.com/w40/${fromCountry}.png`;
   const toFlagUrl = `https://flagcdn.com/w40/${toCountry}.png`;
 
@@ -40,7 +39,7 @@ const toLang = t(`languages.${toKey}`, { defaultValue: toKey });
         {fromLang} <span className={styles.arrow}>↔</span> {toLang}
       </h3>
 
-      <p className={styles.desc}>{t(descKey)}</p>
+      <p className={styles.desc}>{desc}</p>
     </div>
   );
 }
